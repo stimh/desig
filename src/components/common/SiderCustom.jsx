@@ -75,75 +75,18 @@ export default class SiderCustom extends Component{
                         <Link to={"/app/form"}><Icon type="form" /><span>数据中心</span></Link>
                     </Menu.Item>
                     <SubMenu title={<span><Icon type="file-text"></Icon>基础属性数据</span>}>
-                        <Menu.Item key="">
-                            <Link to={''}><span>作战力量</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>指挥控制</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>战备工程</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>武器装备</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>政治工作</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>后勤保障</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>装备保障</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>综合保障</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>作战计算标准</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>战场环境</span></Link>
-                        </Menu.Item>
+                       
                     </SubMenu>
 
                     <SubMenu title={<span><Icon type="file-text"></Icon>动态情况数据</span>}>
-                        <Menu.Item key="">
-                            <Link to={''}><span>作战力量动态情况数据</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>指挥控制活动</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>部队行动及重大事件数据</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>战场环境动态</span></Link>
-                        </Menu.Item>
+                       
                     </SubMenu>
 
                     <SubMenu title={<span><Icon type="file-text"></Icon>决策支持数据</span>}>
                         <Menu.Item key="">
-                            <Link to={''}><span>作战业务资料</span></Link>
+                            <Link to={''}><span></span></Link>
                         </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>作战能力指标数据</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>综合情况判断数据</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>作战态势分析数据</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>综合分析挖掘</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>作战效果评估数据</span></Link>
-                        </Menu.Item>
-                        <Menu.Item key="">
-                            <Link to={''}><span>战场环境影响分析</span></Link>
-                        </Menu.Item>
+                        
                     </SubMenu>
 
                     <SubMenu key={"/app"} title={<span><Icon type="setting"></Icon>管理中心</span>}>
