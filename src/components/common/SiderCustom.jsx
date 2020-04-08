@@ -111,7 +111,6 @@ export default class SiderCustom extends Component{
                          <Menu.Item key={""}>
                             <Link to={""}><span>密码修改</span></Link>
                          </Menu.Item>
-                         
                     </SubMenu>
                 </Menu>
             </Sider>
