@@ -146,7 +146,6 @@ render(){
                             <Input placeholder='提示信息' />
                         )}
             </FormItem>
-
             <FormItem label="类型" {...FormItemLayout} hasFeedback>
                         {getFieldDecorator('type', {
                             rules: [{ required: true, message: '请选择类型' }],
