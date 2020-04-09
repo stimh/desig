@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Button, Row, Col, Modal, Form, Input ,Radio,Slider} from 'antd';
+import { Table, Button, Row, Col, Modal, Form, Input ,Radio,Slider, Select} from 'antd';
 import Search from 'antd/lib/input/Search';
 import FormItem from 'antd/lib/form/FormItem';
 import TextArea from 'antd/lib/input/TextArea';
@@ -151,19 +151,19 @@ render(){
                         {getFieldDecorator('type', {
                             rules: [{ required: true, message: '请选择类型' }],
                         })(
-                            <Radio.Group style={{marginRight: 20}}>
-                                <Radio value='INPUT'>单行文本</Radio>
-                                <Radio value='TEXTAREA'>多行文本</Radio>
-                                <Radio value='SELECT'>下拉框</Radio>
-                                <Radio value='RADIO'>单选</Radio>
-                                <Radio value='CHECKBOX'>多选</Radio>
-                                <Radio value='NUMBER'>数字</Radio>
-                                <Radio value='PHONE'>手机号</Radio>
-                                <Radio value='CDCARD'>身份证</Radio>
-                                <Radio value='EMAIL'>邮箱</Radio>
-                                <Radio value='EDITOR'>编辑器</Radio>
-                                <Radio value='ADDRESS'>地址</Radio>
-                            </Radio.Group>
+                            <Select style={{marginRight: 20}}>
+                                <option value='INPUT'>单行文本</option>
+                                <option value='TEXTAREA'>多行文本</option>
+                                <option value='SELECT'>下拉框</option>
+                                <option value='RADIO'>单选</option>
+                                <option value='CHECKBOX'>多选</option>
+                                <option value='NUMBER'>数字</option>
+                                <option value='PHONE'>手机号</option>
+                                <option value='CDCARD'>身份证</option>
+                                <option value='EMAIL'>邮箱</option>
+                                <option value='EDITOR'>编辑器</option>
+                                <option value='ADDRESS'>地址</option>
+                            </Select>
                         )}
             </FormItem>
 
