@@ -151,7 +151,7 @@ render(){
                         {getFieldDecorator('type', {
                             rules: [{ required: true, message: '请选择类型' }],
                         })(
-                            <Select style={{marginRight: 20}}>
+                            <Select>
                                 <option value='INPUT'>单行文本</option>
                                 <option value='TEXTAREA'>多行文本</option>
                                 <option value='SELECT'>下拉框</option>
@@ -202,7 +202,7 @@ render(){
 
 
             <FormItem label="是否允许为空" {...FormItemLayout} hasFeedback>
-            <Slider disabled={true} />
+            <Slider disabled={false} defaultValue={0} min={0} max={100} />
             </FormItem>
 
             </Form>
