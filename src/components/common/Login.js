@@ -5,13 +5,10 @@ import { Form, Icon, Input, Button, Checkbox, message, Spin } from 'antd';
 const FormItem = Form.Item;
 
 const client_id = 'b7f8065ab0c7188c2a21';
-const authorize_uri = 'https://github.com/login/oauth/authorize';
-const redirect_uri = 'http://localhost:8080/oauth/redirect';
-
 const users = [{
     username:'admin',
     password:'admin'
-},{
+},{ 
     username:'zysoft',
     password:'zysoft'
 }];
@@ -40,7 +37,7 @@ class NormalLoginForm extends Component {
                     let that = this;
                     setTimeout(function() { //延迟进入
                         that.props.history.push({pathname:'/app',state:values});
-                    }, 2000);
+                    }, 500);
 
                 }else{
                     message.error('登陆失败'); //失败信息
