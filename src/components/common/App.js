@@ -13,6 +13,8 @@ import UForm from '../form/Form';
 import noMatch from './404';
 import RichText from "../richText/RichText";
 import UploadEditor from "../upload/UploadEditor";
+import UUserDasic from "../personal/UserDasic";
+import UUpPassword from "../personal/UpPassword";
 
 const {Content, Footer} = Layout;
 
@@ -54,11 +56,13 @@ export default class App extends Component {
                     <Content style={{margin: '0 16px'}}>
                         <Switch>
                             <Route exact path={'/app'} component={MIndex} />
-                            <Route exact path={'/app/form'} component={UForm} />
+                            <Route exact path={'/app/strati/form'} component={UForm} />
                             <Route exact path={'/app/header/Calendars'} component={Calendars} />
                             <Route exact path={'/app/chart/echarts'} component={Echarts} />
                             <Route exact path={'/app/richText'} component={RichText} />
                             <Route exact path={'/app/upload'} component={UploadEditor} />
+							<Route exact path={'/app/userDasic'} component={UUserDasic} />
+							<Route exact path={'/app/upPassword'} component={UUpPassword} />
                             <Route component={noMatch} />
                         </Switch>
                     </Content>

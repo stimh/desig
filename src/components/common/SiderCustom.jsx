@@ -89,9 +89,9 @@ export default class SiderCustom extends Component{
                         
                     </SubMenu>
 
-                    <SubMenu key={"/app"} title={<span><Icon type="setting"></Icon>管理中心</span>}>
-                        <Menu.Item key={"/app/form"}>
-                            <Link to={"/app/form"}><span>用户管理</span></Link>
+                    <SubMenu key={"/app/strati"} title={<span><Icon type="setting"></Icon>管理中心</span>}>
+                        <Menu.Item key={"/app/strati/form"}>
+                            <Link to={"/app/strati/form"}><span>用户管理</span></Link>
                          </Menu.Item>
                          <Menu.Item key={""}>
                             <Link to={""}><span>组织机构管理</span></Link>
@@ -103,13 +103,13 @@ export default class SiderCustom extends Component{
                             <Link to={""}><span>角色管理</span></Link>
                          </Menu.Item>
                     </SubMenu>
-
-                    <SubMenu title={<span><Icon type="user"></Icon>个人中心</span>}>
-                        <Menu.Item key={""}>
-                            <Link to={""}><span>基本信息</span></Link>
+					
+                    <SubMenu key={"/app"} title={<span><Icon type="user"></Icon>个人中心</span>}>
+                        <Menu.Item key={"/app/userDasic"}>
+                            <Link to={"/app/userDasic"}><span>基本信息</span></Link>
                          </Menu.Item>
-                         <Menu.Item key={""}>
-                            <Link to={""}><span>密码修改</span></Link>
+                         <Menu.Item key={"/app/upPassword"}>
+                            <Link to={"/app/upPassword"}><span>密码修改</span></Link>
                          </Menu.Item>
                          
                     </SubMenu>
