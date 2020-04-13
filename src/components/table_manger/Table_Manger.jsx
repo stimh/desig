@@ -28,11 +28,7 @@ this.state={
 };
 
 childClick = (name)=>{
-    message.info("消息："+name.id);
-    //console.log(text);
-    console.log(name);
-    history.push('/app/tablemanger/child');
-    
+    history.push('/app/strati/tablemanger/child');
 }
     
 render(){
