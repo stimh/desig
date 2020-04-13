@@ -150,7 +150,7 @@ render(){
                         {getFieldDecorator('type', {
                             rules: [{ required: true, message: '请选择类型' }],
                         })(
-                            <Select style={{marginRight: 20}}>
+                            <Select>
                                 <option value='INPUT'>单行文本</option>
                                 <option value='TEXTAREA'>多行文本</option>
                                 <option value='SELECT'>下拉框</option>
