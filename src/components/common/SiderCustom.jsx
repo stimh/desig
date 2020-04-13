@@ -37,7 +37,7 @@ export default class SiderCustom extends Component{
             firstHide: collapsed,
         });
     };
-
+    
     menuClick = e => {
         this.setState({
             selectedKey: e.key
@@ -71,22 +71,20 @@ export default class SiderCustom extends Component{
                     <Menu.Item key={"/app"}>
                         <Link to={"/app"}><Icon type="home" /><span>首页</span></Link>
                     </Menu.Item>
+
                     <Menu.Item key={"/app/form"}>
                         <Link to={"/app/form"}><Icon type="form" /><span>数据中心</span></Link>
                     </Menu.Item>
-                    <SubMenu title={<span><Icon type="file-text"></Icon>基础属性数据</span>}>
+
+                    <SubMenu title={<span><Icon type="file-text"></Icon><span>基础属性数据</span></span>}>
                        
                     </SubMenu>
 
-                    <SubMenu title={<span><Icon type="file-text"></Icon>动态情况数据</span>}>
+                    <SubMenu title={<span><Icon type="file-text"></Icon><span>动态情况数据</span></span>}>
                        
                     </SubMenu>
 
-                    <SubMenu title={<span><Icon type="file-text"></Icon>决策支持数据</span>}>
-                        <Menu.Item key="">
-                            <Link to={''}><span></span></Link>
-                        </Menu.Item>
-                        
+                    <SubMenu title={<span><Icon type="file-text"></Icon><span>决策支持数据</span></span>}>
                     </SubMenu>
 
                     <SubMenu key={"/app/strati"} title={<span><Icon type="setting"></Icon>管理中心</span>}>
@@ -115,7 +113,6 @@ export default class SiderCustom extends Component{
                          <Menu.Item key={"/app/upPassword"}>
                             <Link to={"/app/upPassword"}><span>密码修改</span></Link>
                          </Menu.Item>
-                         
                     </SubMenu>
                 </Menu>
             </Sider>
