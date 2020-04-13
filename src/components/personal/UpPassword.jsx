@@ -79,7 +79,7 @@ class UpPassword extends Component {
 		   <Card style={{cursor:'pointer', marginBottom:16}}>
 		      <Form {...formItemLayout} onSubmit={this.handleSubmit}>
 		        <Form.Item label="旧密码">
-		          {getFieldDecorator('旧密码', {
+		          {getFieldDecorator('oldPassword', {
 		            rules: [
 		              {
 		                required: true,

@@ -7,9 +7,10 @@ export default class BreadcrumbCustom extends Component{
         const { paths } = this.props;
         let v = paths.map(function(item,index){
             return (
+            
                 <Breadcrumb.Item key="item">
                     {item==="首页"?<Link to={"/app"}>{item}</Link>:item}
-                </Breadcrumb.Item>
+                </Breadcrumb.Item>  
             )
         });
         return v;
