@@ -89,18 +89,9 @@ export default class SiderCustom extends Component{
                         
                     </SubMenu>
 
-<<<<<<< HEAD
                     <SubMenu key={"/app/strati"} title={<span><Icon type="setting"></Icon>管理中心</span>}>
                         <Menu.Item key={"/app/strati/form"}>
                             <Link to={"/app/strati/form"}><span>用户管理</span></Link>
-=======
-
-
-
-                    <SubMenu key={"/app"} title={<span><Icon type="setting"></Icon>管理中心</span>}>
-                        <Menu.Item key={"/app/form"}>
-                            <Link to={"/app/form"}><span>用户管理</span></Link>
->>>>>>> 6386851921d2080bd5c13218a9e614f38295d7b9
                          </Menu.Item>
                          <Menu.Item key={""}>
                             <Link to={""}><span>组织机构管理</span></Link>

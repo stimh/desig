@@ -13,13 +13,10 @@ import UForm from '../form/Form';
 import noMatch from './404';
 import RichText from "../richText/RichText";
 import UploadEditor from "../upload/UploadEditor";
-<<<<<<< HEAD
 import UUserDasic from "../personal/UserDasic";
 import UUpPassword from "../personal/UpPassword";
-=======
 import TableManger from "../table_manger/Table_Manger"
 import TablechildManger from "../table_manger/Tablechild_Manger"
->>>>>>> 6386851921d2080bd5c13218a9e614f38295d7b9
 
 const {Content, Footer} = Layout;
 
@@ -66,14 +63,10 @@ export default class App extends Component {
                             <Route exact path={'/app/chart/echarts'} component={Echarts} />
                             <Route exact path={'/app/richText'} component={RichText} />
                             <Route exact path={'/app/upload'} component={UploadEditor} />
-<<<<<<< HEAD
 							<Route exact path={'/app/userDasic'} component={UUserDasic} />
 							<Route exact path={'/app/upPassword'} component={UUpPassword} />
-=======
                             <Route exact path={'/app/tablemanger'} component={TableManger} />
                             <Route exact path={'/app/tablemanger/child'} component={TablechildManger} />
-                            
->>>>>>> 6386851921d2080bd5c13218a9e614f38295d7b9
                             <Route component={noMatch} />
                         </Switch>
                     </Content>
