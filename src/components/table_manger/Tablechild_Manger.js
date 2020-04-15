@@ -68,6 +68,7 @@ render(){
         <Button type='primary'>查看</Button>
         <Button type='default'>修改</Button>
         <Button type='danger'>删除</Button>
+        <Button type='primary'>获取地址</Button>
         </Row>
     }];
 
@@ -201,7 +202,7 @@ render(){
             </FormItem>
 
 
-            <FormItem label="是否允许为空" {...FormItemLayout} hasFeedback>
+            <FormItem label="权重" {...FormItemLayout} hasFeedback>
             <Slider disabled={false} defaultValue={0} min={0} max={100} />
             </FormItem>
 

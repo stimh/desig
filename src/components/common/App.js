@@ -18,7 +18,7 @@ import UUserDasic from "../personal/UserDasic";
 import UUpPassword from "../personal/UpPassword";
 import TableManger from "../table_manger/Table_Manger"
 import TablechildManger from "../table_manger/Tablechild_Manger"
-
+import TableShow from "../table_show/table_show"
 const {Content, Footer} = Layout;
 
 export default class App extends Component {
@@ -69,6 +69,9 @@ export default class App extends Component {
 							<Route exact path={'/app/strati/privileDiction'} component={PrivileDiction} />
                             <Route exact path={'/app/tablemanger'} component={TableManger} />
                             <Route exact path={'/app/tablemanger/child'} component={TablechildManger} />
+                            <Route exact path={'/app/strati/tablemanger'} component={TableManger} />
+                            <Route exact path={'/app/strati/tablemanger/child'} component={TablechildManger} />
+                            <Route exact path={'/app/basics/tableshow'} component={TableShow} />
                             <Route component={noMatch} />
                         </Switch>
                     </Content>

@@ -76,8 +76,10 @@ export default class SiderCustom extends Component{
                         <Link to={"/app/form"}><Icon type="form" /><span>数据中心</span></Link>
                     </Menu.Item>
 
-                    <SubMenu title={<span><Icon type="file-text"></Icon><span>基础属性数据</span></span>}>
-                       
+                    <SubMenu key={"/app/basics"} title={<span><Icon type="file-text"></Icon><span>基础属性数据</span></span>}>
+                        <Menu.Item key={"/app/basics/tableshow?id=1"}>
+                            <Link to='/app/basics/tableshow?id=1'><span>ZZLL</span></Link>
+                        </Menu.Item>
                     </SubMenu>
 
                     <SubMenu title={<span><Icon type="file-text"></Icon><span>动态情况数据</span></span>}>
@@ -101,8 +103,8 @@ export default class SiderCustom extends Component{
                             <Link to={""}><span>角色管理</span></Link>
                          </Menu.Item>
 
-                         <Menu.Item key={"/app/tablemanger"}>
-                            <Link to={"/app/tablemanger"}><span>表管理</span></Link>
+                         <Menu.Item key={"/app/strati/tablemanger"}>
+                            <Link to={"/app/strati/tablemanger"}><span>表管理</span></Link>
                          </Menu.Item>
                     </SubMenu>
 					

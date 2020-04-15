@@ -9,3 +9,11 @@ html, body, :global(#root){
   height: 100%;
   background-color: #f8f8f8;  
 }
+
+margin-bottom-20{
+  margin-bottom: 20px;
+}
+
+margin-top-30{
+ margin-top: 30px;
+}
