@@ -12,6 +12,7 @@ import Echarts from '../chart/echarts/Echarts';
 import UForm from '../form/Form';
 import noMatch from './404';
 import RichText from "../richText/RichText";
+import PrivileDiction from "../gementCenter/PrivileDiction";
 import UploadEditor from "../upload/UploadEditor";
 import UUserDasic from "../personal/UserDasic";
 import UUpPassword from "../personal/UpPassword";
@@ -65,6 +66,7 @@ export default class App extends Component {
                             <Route exact path={'/app/upload'} component={UploadEditor} />
 							<Route exact path={'/app/userDasic'} component={UUserDasic} />
 							<Route exact path={'/app/upPassword'} component={UUpPassword} />
+							<Route exact path={'/app/strati/privileDiction'} component={PrivileDiction} />
                             <Route exact path={'/app/tablemanger'} component={TableManger} />
                             <Route exact path={'/app/tablemanger/child'} component={TablechildManger} />
                             <Route component={noMatch} />

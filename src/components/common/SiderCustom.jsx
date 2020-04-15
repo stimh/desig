@@ -94,8 +94,8 @@ export default class SiderCustom extends Component{
                          <Menu.Item key={""}>
                             <Link to={""}><span>组织机构管理</span></Link>
                          </Menu.Item>
-                         <Menu.Item key={""}>
-                            <Link to={""}><span>权限管理</span></Link>
+                         <Menu.Item key={"/app/strati/privileDiction"}>
+                            <Link to={"/app/strati/privileDiction"}><span>权限管理</span></Link>
                          </Menu.Item>
                          <Menu.Item key={""}>
                             <Link to={""}><span>角色管理</span></Link>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {setCookie} from "../../helpers/cookies";
 import '../../style/login.less';
+import axios from 'axios';
 import { Form, Icon, Input, Button, Checkbox, message, Spin } from 'antd';
 const FormItem = Form.Item;
 
@@ -15,19 +16,53 @@ const users = [{
 
 function PatchUser(values) {  //匹配用户
     const {username, password} = values;
-    return users.find(user => user.username === username && user.password === password);
+    //return users.find(user => user.username === username && user.password === password);
+	//getData
+	/* getData = () => {
+	    axios.post('localhost:8080/user/login',{
+			username:username,
+			password:password
+		})
+	        .then(function (response) {
+	            // console.log(response.data);
+	            this.setState({
+	                dataSource: response.data,
+	                loading:false
+	            })
+	        }.bind(this))
+	        .catch(function (error) {
+	            console.log(error);
+	        })
+	}; */
+    return axios.get('/user/login',{
+		params: {
+		      username:username,
+		      password:password
+		    }
+	})
+	.then(function (response) {
+	        console.log(response);
+	        return response.data.code;
+			/* this.setState({
+			    code: response.data.code;
+			}); */
+	    }).catch(function (error) {
+	        console.log(error);
+	    })
 }
 
 class NormalLoginForm extends Component {
     state = {
         isLoding:false,
+		code:0,
     };
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                if(PatchUser(values)){
+				console.log(PatchUser(values));
+                if(PatchUser(values).resolved == 200){
                     this.setState({
                         isLoding: true,
                     });
