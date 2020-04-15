@@ -30,27 +30,21 @@ let FromData = {
   }]
 }
 
-let {
-  btn_add_visable,
-  btn_delete_visable,
-  btn_import_visable,
-  btn_export_visable,
-  btn_search_visable,
-  btn_search_jq_visable,
-  btn_update_visable,
-  btn_show_visable
-  } = true;
-
-  let modal_visable=false;
-  let modal_title="新增";
-
-
 class table_show extends Component{
 constructor(props){
 super(props);
-this.state={}
-
-
+this.state={
+  modal_visable:false,
+  modal_title:'新增',
+  btn_add_visable:true,
+  btn_delete_visable:false,
+  btn_import_visable:false,
+  btn_export_visable:false,
+  btn_search_visable:false,
+  btn_search_jq_visable:false,
+  btn_update_visable:false,
+  btn_show_visable:false
+}
 }
 
 componentDidMount() {
@@ -67,23 +61,26 @@ handleSubmit = e => {
     if (!err) {
       console.log('Received values of form: ', values);
     }
-    this.modal_visable=false;
+    this.setState({
+      modal_visable:false
+    })
   });
 };
 
 addClick =()=>{
   console.log("新增");
-  this.modal_visable=true;
+  this.setState({
+    modal_visable:true
+  })
 };
 
 handleCancel = () => {
-  this.modal_visable=false;
+  this.setState({
+    modal_visable:false
+  })
 };
 
 render(){
-    
-    
-
 
     const columns=[{
       title:'名称',
@@ -124,31 +121,24 @@ render(){
 
     const {getFieldDecorator } = this.props.form;
 
-  
-
     return(
       <div>
-      <Row gutter={24} className="margin-bottom-20">
+      <Row gutter={24} className="margin-bottom-20 margin-top-30">
       <Col sm={16}>
-      <Button type='primary' onClick={this.addClick} className={btn_add_visable?'show':'hide'} > 新增</Button>
-      <Button type='primary' className={btn_add_visable?'show':'hide'}>批量删除</Button>
-      <Button type='primary' className={btn_import_visable?'show':'hide'}>导入</Button>
-      <Button type='primary' className={btn_export_visable?'show':'hide'}>导出</Button>
-      <Button type='primary' className={btn_search_jq_visable?'show':'hide'}>精确查找</Button>
+      <Button type='primary' onClick={this.addClick}  className={this.state.btn_add_visable?'show':'hide'} > 新增</Button>
+      <Button type='primary' className={this.state.btn_add_visable?'show':'hide'}>批量删除</Button>
+      <Button type='primary' className={this.state.btn_import_visable?'show':'hide'}>导入</Button>
+      <Button type='primary' className={this.state.btn_export_visable?'show':'hide'}>导出</Button>
+      <Button type='primary' className={this.state.btn_search_jq_visable?'show':'hide'}>精确查找</Button>
       </Col>
 
       <Col sm={8}>
-          <Search placeholder="搜索"  addclassName={btn_search_visable?'show':'hide'}></Search>
+          <Search placeholder="搜索"  className={this.state.btn_search_visable?'show':'hide'}></Search>
       </Col>
 
       </Row>
 
-      <Table columns={columns} dataSource={dataSource} tableLayout="auto">
-
-      </Table>
-
-
-      <Modal visible={modal_visable=true} title="{modan_title}" okText='提交' cancelText='关闭' onOk={this.handleCancel} onCancel={this.handleCancel}>
+      <Modal visible={this.state.modal_visable} title={this.state.modal_title} okText='提交' cancelText='关闭' onOk={this.handleCancel} onCancel={this.handleCancel}>
             <div id="analysisTree">
                         <Form onSubmit={this.handleSubmit}>
                           {
@@ -186,12 +176,17 @@ render(){
                                }
                             })
                           }
-                          <Form.Item>
-                            <Button htmlType='submit'>提交</Button>
-                          </Form.Item>
-                        </Form>
+                  </Form>
             </div>
       </Modal>
+
+
+      <Table columns={columns} dataSource={dataSource} tableLayout="auto">
+
+      </Table>
+
+
+      
       </div>
     );
 }
